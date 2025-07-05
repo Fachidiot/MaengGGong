@@ -267,7 +267,7 @@ QualitySettings:
     globalTextureMipmapLimit: 0
     textureMipmapLimitSettings: []
     anisotropicTextures: 2
-    antiAliasing: 2
+    antiAliasing: 4
     softParticles: 1
     softVegetation: 1
     realtimeReflectionProbes: 1
@@ -277,7 +277,7 @@ QualitySettings:
     realtimeGICPUUsage: 100
     lodBias: 2
     maximumLODLevel: 0
-    enableLODCrossFade: 1
+    enableLODCrossFade: 0
     streamingMipmapsActive: 0
     streamingMipmapsAddAllCameras: 1
     streamingMipmapsMemoryBudget: 512
@@ -289,7 +289,7 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
-    customRenderPipeline: {fileID: 11400000, guid: 41c2ae0817c553b449bc2c6add37986c, type: 2}
+    customRenderPipeline: {fileID: 11400000, guid: 9599d709a944ce947b63d5df50b3dadb, type: 2}
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
@@ -310,6 +310,7 @@ QualitySettings:
     Nintendo Switch: 5
     PS4: 5
     PS5: 5
+    Server: 0
     Stadia: 5
     Standalone: 5
     WebGL: 3

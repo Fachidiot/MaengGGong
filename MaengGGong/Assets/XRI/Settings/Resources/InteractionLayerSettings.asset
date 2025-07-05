@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LayerNames:
   - Default
+  - Interactable
+  - Interactable Ignore Ray
+  - UI
   - 
   - 
   - 
@@ -41,7 +44,4 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Teleport
