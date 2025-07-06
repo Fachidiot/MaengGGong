@@ -13,6 +13,8 @@
 **/Assets/KHS
 **/Assets/KHS.meta
 *.log
+**.mp4
+**.mp4.meta
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

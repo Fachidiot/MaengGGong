@@ -13,7 +13,21 @@ MonoBehaviour:
   m_Name: vHierarchy Data
   m_EditorClassIdentifier: 
   sceneDatas_byGuid:
-    keys: []
-    values: []
+    keys:
+    - d2a4efdc99bb95f4c93f925bdb81ae9d
+    values:
+    - goDatas_byGlobalId:
+        keys:
+        - globalObjectIdString: GlobalObjectId_V1-2-d2a4efdc99bb95f4c93f925bdb81ae9d-5901391571980940496-1956053742
+        - globalObjectIdString: GlobalObjectId_V1-2-d2a4efdc99bb95f4c93f925bdb81ae9d-8704295635460256778-1956053742
+        values:
+        - colorIndex: 5
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
+        - colorIndex: 5
+          iconNameOrGuid: 
+          isIconRecursive: 0
+          isColorRecursive: 0
   bookmarks: []
   bookmarkedScenePaths: []
