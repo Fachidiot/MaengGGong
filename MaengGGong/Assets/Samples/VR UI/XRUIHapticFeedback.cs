@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.XR.Interaction.Toolkit;
+
 using UnityEngine.XR.Interaction.Toolkit.UI;
 
 [Serializable]
@@ -49,7 +49,7 @@ public class XRUIHapticFeedback : MonoBehaviour, IPointerEnterHandler, IPointerE
     private void TriggerHaptic(PointerEventData eventData, HapticSettings hapticSettings)
     {
         // Get Interactor to send haptic
-        XRRayInteractor interactor = InputModule.GetInteractor(eventData.pointerId) as XRRayInteractor;
+        UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor interactor = InputModule.GetInteractor(eventData.pointerId) as UnityEngine.XR.Interaction.Toolkit.Interactors.XRRayInteractor;
 
         if (!interactor) return;
 

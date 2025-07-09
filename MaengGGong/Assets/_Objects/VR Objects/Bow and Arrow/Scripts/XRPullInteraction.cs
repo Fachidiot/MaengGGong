@@ -3,7 +3,7 @@ using System.Drawing;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class XRPullInteraction : XRBaseInteractable
+public class XRPullInteraction : UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable
 {
     public event Action<float> PullActionReleased;
     public event Action<float> PullUpdated;
@@ -17,7 +17,7 @@ public class XRPullInteraction : XRBaseInteractable
     public float pullAmount { get; private set; } = 0.0f;   // Player's Pull Amount
 
     private LineRenderer _lineRenderer; // Bow's string linerenderer
-    private IXRSelectInteractor _pullingInteractor = null;   // Left hand, Right hand Check.
+    private UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor _pullingInteractor = null;   // Left hand, Right hand Check.
     protected override void Awake()
     {
         base.Awake();

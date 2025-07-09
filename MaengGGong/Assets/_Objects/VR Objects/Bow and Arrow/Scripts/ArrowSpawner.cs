@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Drawing;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class ArrowSpawner : MonoBehaviour
 {
@@ -9,14 +9,14 @@ public class ArrowSpawner : MonoBehaviour
     [SerializeField] private GameObject _notchPoint;    // Arrow Spawn Point
     [SerializeField] private float _spawnDelay = 1f;
 
-    private XRGrabInteractable _bow;
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable _bow;
     private XRPullInteraction _pullInteractable;
     private bool _arrowNotched = false;
     private GameObject _currentArrow = null;
 
     void Start()
     {
-        _bow = GetComponent<XRGrabInteractable>();
+        _bow = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
         _pullInteractable = GetComponentInChildren<XRPullInteraction>();
 
         if (null != _pullInteractable)

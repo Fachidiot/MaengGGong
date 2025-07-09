@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class DistanceReleaseGrabInteractable : XRGrabInteractable
+public class DistanceReleaseGrabInteractable : UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable
 {
     public float maxGrabDistance = 0.25f;   // Max distance before auto-release
-    private IXRSelectInteractor cachedInteractor;   // To Keep track of the interactor
+    private UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor cachedInteractor;   // To Keep track of the interactor
 
     protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
