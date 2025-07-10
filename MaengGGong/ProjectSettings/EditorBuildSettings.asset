@@ -6,16 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/Door Scene.unity
+    path: Assets/_Scenes/MenuStage.unity
+    guid: 49d3a9f0f96aaaf49a64977b987a0efb
+  - enabled: 1
+    path: Assets/_Scenes/MainStage.unity
+    guid: 47e44514f5c18914a93568b4ee9985c2
+  - enabled: 1
+    path: Assets/_Scenes/Test/Door Scene.unity
     guid: 83df5fcf1f307ad469d7d225a95455dc
   - enabled: 1
-    path: Assets/_Scenes/Menu Scene.unity
+    path: Assets/_Scenes/Test/Menu Scene.unity
     guid: d2a4efdc99bb95f4c93f925bdb81ae9d
   - enabled: 1
-    path: Assets/_Scenes/Test Scene.unity
+    path: Assets/_Scenes/Test/Test Scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/_Scenes/Video Scene.unity
+    path: Assets/_Scenes/Test/Video Scene.unity
     guid: b01ecfc6ef985374a80bbfd87ea77820
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bd8d8fd2bf0db39429c01ca97b8d6e80, type: 2}

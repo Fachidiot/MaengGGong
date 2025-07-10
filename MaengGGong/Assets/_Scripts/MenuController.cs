@@ -38,7 +38,7 @@ public class MenuController : MonoBehaviour
             case InputDeviceChange.Reconnected:
                 openMenuAction.action.Enable();
                 openMenuAction.action.performed += ToggleMenu;
-            break;
+                break;
         }
     }
 }

@@ -1,5 +1,7 @@
 using UnityEngine;
 using EzySlice;
+using Unity.XR.CoreUtils;
+using System.Collections.Generic;
 
 public class XRSliceObject : MonoBehaviour
 {
@@ -15,6 +17,8 @@ public class XRSliceObject : MonoBehaviour
     [Tooltip("slice force")]
     [SerializeField] private float _cutForce = 1000f;
 
+    private GameObject _parentObj;
+
     private void FixedUpdate()
     {
         // Raycast to Find Object.
@@ -23,7 +27,18 @@ public class XRSliceObject : MonoBehaviour
         if (hasHit)
         {
             GameObject target = hit.transform.gameObject;
-            Slice(target);
+            if (target.GetComponent<MeshCollider>() || target.GetComponent<BoxCollider>())
+            {
+                _parentObj = null;
+                Slice(target);
+            }
+            else
+            {
+                List<GameObject> targets = new List<GameObject>();
+                target.GetChildGameObjects(targets);
+                _parentObj = target;
+                Slice(targets[0]);
+            }
         }
     }
 
@@ -37,7 +52,10 @@ public class XRSliceObject : MonoBehaviour
         SlicedHull hull = target.Slice(_endSlicePoint.position, planeNormal);
 
         if (null == hull)
+        {
+            Debug.LogWarning("slice didnt work");
             return;
+        }
 
         // Make Sliced Objects
         GameObject upperHull = hull.CreateUpperHull(target, _crossSectionMaterial);
@@ -46,6 +64,11 @@ public class XRSliceObject : MonoBehaviour
         GameObject lowerHull = hull.CreateLowerHull(target, _crossSectionMaterial);
         SetupSlicedComponent(lowerHull);
 
+        if (null != _parentObj)
+        {
+            upperHull.transform.parent = _parentObj.transform;
+            lowerHull.transform.parent = _parentObj.transform;
+        }
         // Destroy Original
         Destroy(target);
     }
@@ -54,7 +77,9 @@ public class XRSliceObject : MonoBehaviour
     {
         Rigidbody rigidbody = slicedObject.AddComponent<Rigidbody>();
         MeshCollider collider = slicedObject.AddComponent<MeshCollider>();
+        slicedObject.layer = LayerMask.NameToLayer("Sliceable");
         collider.convex = true;
         rigidbody.AddExplosionForce(_cutForce, slicedObject.transform.position, 1);
+        Destroy(slicedObject, 3);  // auto destroy time;
     }
 }
