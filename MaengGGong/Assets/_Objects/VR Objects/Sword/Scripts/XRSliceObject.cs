@@ -66,6 +66,7 @@ public class XRSliceObject : MonoBehaviour
 
         if (null != _parentObj)
         {
+            _parentObj.GetComponent<Enemy>().Die();
             upperHull.transform.parent = _parentObj.transform;
             lowerHull.transform.parent = _parentObj.transform;
         }
