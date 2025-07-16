@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8694221619956626337}
   - component: {fileID: 7907904171190468592}
   - component: {fileID: 1806185716931453167}
-  - component: {fileID: 1231149607987256678}
+  - component: {fileID: 6220528770552179023}
   m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1231149607987256678
-BoxCollider:
+--- !u!64 &6220528770552179023
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,9 +102,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &5953674352479377290
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ecb588aefeffe4b928f1478532be60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 5
+  _moveSpeed: 3
   _rotationSpeed: 5
   _stoppingDistance: 0.5
 --- !u!195 &-4140267904635064611

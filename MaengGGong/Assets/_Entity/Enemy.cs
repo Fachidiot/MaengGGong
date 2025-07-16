@@ -4,10 +4,10 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed = 5f; // 이동 속도
+    [SerializeField] private float _moveSpeed = 3f; // 이동 속도
     [SerializeField] private float _rotationSpeed = 5f; // 회전 속도
-    [SerializeField] private float _stoppingDistance = 0.5f; // 플레이어와의 최소 거리
-    private Transform _player;
+    [SerializeField] private float _stoppingDistance = 0.2f; // 플레이어와의 최소 거리
+    [SerializeField] private Transform _player;
     private NavMeshAgent _navMeshAgent;
 
     public void SetPlayer(GameObject player)
@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     {
         _navMeshAgent.isStopped = true;
         // Die Animation & SFX 재생
+        Debug.Log($"{name} dead");
     }
 
     void Start()
