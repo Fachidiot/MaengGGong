@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour
         // 플레이어와의 거리가 stoppingDistance 이하일 때 소멸
         if (Vector3.Distance(transform.position, _player.position) <= _stoppingDistance)
         {
+            Debug.Log("Player Collision Destroy");
             Destroy(gameObject);
         }
         else

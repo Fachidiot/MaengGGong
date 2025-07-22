@@ -44,6 +44,8 @@ public class XRSliceObject : MonoBehaviour
 
     private void Slice(GameObject target)
     {
+        // TODO : SFX 재생
+
         if (_parentObj)
             _parentObj.GetComponent<Enemy>().Die();
             

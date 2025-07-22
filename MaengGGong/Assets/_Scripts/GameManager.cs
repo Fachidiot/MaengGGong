@@ -8,6 +8,6 @@ public class GameManager : MonoBehaviour
 
     public void PlayStage(int stage)
     {
-        SceneManager.LoadScene("MainStage");
+        SceneManager.LoadScene("StageScene");
     }
 }

@@ -39,6 +39,6 @@ public class EnemySpawner : MonoBehaviour
         GameObject enemy = Instantiate(_enemyPrefab, transform.position, transform.rotation);
         Enemy setting = enemy.GetComponent<Enemy>();
         setting.SetPlayer(_player);
-        Destroy(enemy, 10);
+        Destroy(enemy, 15);
     }
 }
