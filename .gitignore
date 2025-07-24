@@ -12,6 +12,7 @@
 **/[Uu]ser[Ss]ettings/
 **/Assets/Maps
 **/Assets/Maps.meta
+**/Assets/_Resources
 *.log
 **.mp4
 **.mp4.meta

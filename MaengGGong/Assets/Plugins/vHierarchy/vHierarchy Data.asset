@@ -30,5 +30,4 @@ MonoBehaviour:
           isIconRecursive: 0
           isColorRecursive: 0
   bookmarks: []
-  bookmarkedScenePaths:
-  - Assets/_Scenes/Test/Map Scene.unity
+  bookmarkedScenePaths: []
